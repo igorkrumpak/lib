@@ -1,4 +1,4 @@
-package si.iitech.web_parser;
+package si.iitech.exception.impl;
 
 public class WebParserException extends Exception {
 

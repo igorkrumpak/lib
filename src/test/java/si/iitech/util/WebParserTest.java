@@ -1,9 +1,12 @@
-package si.iitech.web_parser;
+package si.iitech.util;
 
 import static org.junit.Assert.*;
 
 import org.jsoup.nodes.Document;
 import org.junit.Test;
+
+import si.iitech.exception.impl.WebParserException;
+import si.iitech.util.WebParser;
 
 public class WebParserTest {
 

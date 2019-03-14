@@ -1,4 +1,4 @@
-package si.iitech.web_parser;
+package si.iitech.util;
 
 
 import java.io.IOException;
@@ -20,6 +20,8 @@ import javax.net.ssl.X509TrustManager;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+
+import si.iitech.exception.impl.WebParserException;
 
 public class WebParser {
 
