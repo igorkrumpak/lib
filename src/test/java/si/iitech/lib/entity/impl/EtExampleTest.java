@@ -5,11 +5,11 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import si.iitech.lib.AbstractTest;
+import si.iitech.lib.AbstractJpaTest;
 import si.iitech.lib.repository.ExampleRepository;
 
 
-public class EtExampleTest extends AbstractTest {
+public class EtExampleTest extends AbstractJpaTest {
 
 	@Autowired
 	private ExampleRepository exampleRepository;

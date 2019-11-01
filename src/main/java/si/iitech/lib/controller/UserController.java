@@ -17,7 +17,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import si.iitech.lib.entity.EtUser;
+import si.iitech.lib.exception.UserExceptionMessages;
+import si.iitech.lib.exception.impl.UserException;
 import si.iitech.lib.repository.UserRepository;
+import si.iitech.lib.util.JWTUtils;
 
 public abstract class UserController<T extends EtUser> {
 
@@ -47,5 +50,11 @@ public abstract class UserController<T extends EtUser> {
 			errors.put(fieldName, errorMessage);
 		});
 		return errors;
+	}
+	
+	protected T getUser(String token) throws UserException {
+		T user = userRepository.findByEmail(JWTUtils.getUser(token));
+		if(user == null) throw new UserException(UserExceptionMessages.USER_DOES_NOT_EXIST);
+		return user;
 	}
 }

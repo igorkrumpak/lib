@@ -2,9 +2,9 @@ package si.iitech.lib.parser;
 
 import org.junit.Test;
 
-import si.iitech.lib.AbstractTest;
+import si.iitech.lib.AbstractJpaTest;
 
-public class EtSourceTest extends AbstractTest {
+public class EtSourceTest extends AbstractJpaTest {
 
 	@Test
 	public void testCreateExampleSource() {
